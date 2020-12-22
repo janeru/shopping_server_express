@@ -30,5 +30,5 @@ app.use("/api/products", require("./routes/api/products"));
 
 
 // Run the server
-app.listen(5000, () => console.log(`Server running in 5000`));
+app.listen(process.env.PORT, () => console.log(`Server running in 5000`));
 // server.listen(5000, () => console.log(`Server running in 5000`));
