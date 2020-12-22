@@ -5,10 +5,10 @@ const app = express();
 const connectToMongoDB = require("./config/db");
 const fs = require('fs');
 const https = require('https');
-const key = fs.readFileSync('./https/server.key');
-const cert = fs.readFileSync('./https/server.crt');
+// const key = fs.readFileSync('./https/server.key');
+// const cert = fs.readFileSync('./https/server.crt');
 
-const server = https.createServer({ key: key, cert: cert }, app);
+// const server = https.createServer({ key: key, cert: cert }, app);
 // Accept incoming request
 app.use(express.json({ extended: false }));
 
@@ -30,4 +30,5 @@ app.use("/api/products", require("./routes/api/products"));
 
 
 // Run the server
-server.listen(5000, () => console.log(`Server running in 5000`));
+app.listen(5000, () => console.log(`Server running in 5000`));
+// server.listen(5000, () => console.log(`Server running in 5000`));
