@@ -1,0 +1,7 @@
+/node_modules
+.env
+
+/https
+/https/server.crt
+/https/server.csr
+/https/server.key
